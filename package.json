@@ -1,7 +1,7 @@
 {
   "name": "moon-ying-cui-test",
   "description": "test plugin",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Moon Cui",
   "bugs": "https://github.com/MoonCui-Ying/moon-ying-cui-test/issues",
   "dependencies": {

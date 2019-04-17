@@ -22,7 +22,7 @@ $ npm install -g moon-ying-cui-test
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-moon-ying-cui-test/0.3.0 win32-x64 node-v10.15.3
+moon-ying-cui-test/0.4.0 win32-x64 node-v10.15.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -30,7 +30,24 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx carmax:force:namedcredential:mask [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`](#sfdx-carmaxforcenamedcredentialmask--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfatal)
 * [`sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`](#sfdx-helloorg--n-string--f--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfatal)
+
+## `sfdx carmax:force:namedcredential:mask [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`
+
+```
+USAGE
+  $ sfdx carmax:force:namedcredential:mask [-u <string>] [--apiversion <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal]
+
+OPTIONS
+  -u, --targetusername=targetusername             username or alias for the target org; overrides default target org
+  --apiversion=apiversion                         override the api version used for api requests made by this command
+  --json                                          format output as json
+  --loglevel=(trace|debug|info|warn|error|fatal)  [default: warn] logging level for this command invocation
+```
+
+_See code: [src\commands\carmax\force\namedcredential\mask.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.4.0/src\commands\carmax\force\namedcredential\mask.ts)_
 
 ## `sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`
 
@@ -59,7 +76,7 @@ EXAMPLES
      Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
 ```
 
-_See code: [src\commands\hello\org.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.3.0/src\commands\hello\org.ts)_
+_See code: [src\commands\hello\org.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.4.0/src\commands\hello\org.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
