@@ -1,5 +1,5 @@
-import { flags,SfdxCommand } from '@salesforce/command';
-import { Messages } from '@salesforce/core';
+import { SfdxCommand } from '@salesforce/command';
+
 import { AnyJson } from '@salesforce/ts-types';
 
 //const messages = Messages.loadMessages('moon-ying-cui-test', 'mask');
@@ -14,7 +14,7 @@ export default class Mask extends SfdxCommand {
         
       };
       */
-     
+
     public async run(): Promise<AnyJson> {
         const conn = this.org.getConnection();
         const query = 'SELECT Id,DeveloperName,Endpoint,MasterLabel,PrincipalType FROM NamedCredential';
