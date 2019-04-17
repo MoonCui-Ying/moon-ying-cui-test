@@ -30,21 +30,7 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
-* [`sfdx carmax:force:namedcredential:mask [--json] [--loglevel trace|debug|info|warn|error|fatal]`](#sfdx-carmaxforcenamedcredentialmask---json---loglevel-tracedebuginfowarnerrorfatal)
 * [`sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`](#sfdx-helloorg--n-string--f--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfatal)
-
-## `sfdx carmax:force:namedcredential:mask [--json] [--loglevel trace|debug|info|warn|error|fatal]`
-
-```
-USAGE
-  $ sfdx carmax:force:namedcredential:mask [--json] [--loglevel trace|debug|info|warn|error|fatal]
-
-OPTIONS
-  --json                                          format output as json
-  --loglevel=(trace|debug|info|warn|error|fatal)  [default: warn] logging level for this command invocation
-```
-
-_See code: [src\commands\carmax\force\namedcredential\mask.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.2.0/src\commands\carmax\force\namedcredential\mask.ts)_
 
 ## `sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal]`
 
