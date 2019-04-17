@@ -22,7 +22,7 @@ $ npm install -g moon-ying-cui-test
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-moon-ying-cui-test/0.2.0 win32-x64 node-v10.15.3
+moon-ying-cui-test/0.3.0 win32-x64 node-v10.15.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -59,7 +59,7 @@ EXAMPLES
      Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
 ```
 
-_See code: [src\commands\hello\org.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.2.0/src\commands\hello\org.ts)_
+_See code: [src\commands\hello\org.ts](https://github.com/MoonCui-Ying/moon-ying-cui-test/blob/v0.3.0/src\commands\hello\org.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
