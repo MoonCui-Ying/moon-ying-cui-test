@@ -9,8 +9,8 @@ const messages = Messages.loadMessages('moon-ying-cui-test', 'mask');
 export default class Mask extends SfdxCommand {
     protected static requiresUsername = true;
     protected static flagsConfig = {
-        // flag with a value (-a, --alias)
-        alias: flags.string({required:true, description: messages.getMessage('aliasDescription')})        
+        // flag with a value (--suffix)
+        suffix: flags.string({required:true, description: messages.getMessage('suffixDescription')})        
     };
 
     public async run(): Promise<AnyJson> {
@@ -25,6 +25,7 @@ export default class Mask extends SfdxCommand {
         return;
     }
 
+    //list all Named Credentials.
     private async getNamedCredentialNameList() : Promise<Array<string>>{
         const conn = this.org.getConnection();
         const apiVersion: string = conn.getApiVersion();
@@ -48,7 +49,8 @@ export default class Mask extends SfdxCommand {
         return ncNameList;
     }
 
-    private async updateNCList(ncNameList): Promise<SaveResult | SaveResult[]>{
+    //read Named Credential details with fullname.
+    private async updateNCList(ncNameList:Array<string>): Promise<SaveResult | SaveResult[]>{
         const conn = this.org.getConnection();
         let ncDetailList: any = await conn.metadata.read('NamedCredential',ncNameList);
         if(ncDetailList.constructor === Array){
@@ -56,17 +58,20 @@ export default class Mask extends SfdxCommand {
                 nc = this.updateNC(nc);
             }
         }else{
+            console.log(ncDetailList);
             ncDetailList = this.updateNC(ncDetailList);
         }
         let saveResult = await conn.metadata.update('NamedCredential', ncDetailList);
         return saveResult;
     }
 
-    private updateNC(nc):Promise<AnyJson>{
-        const suffix = this.flags.alias;
-        nc.username = nc.username + '_' + suffix;
+    //Update some field values.
+    private updateNC(nc:any){
+        const suffix = '_' + this.flags.suffix;
+        nc.label    = nc.label + suffix;
+        nc.username = nc.username + suffix;
         nc.password = 'Not Valid';
-        nc.endpoint = nc.endpoint + '_' + suffix;
+        nc.endpoint = nc.endpoint + suffix;
         return nc;
     }
 }
